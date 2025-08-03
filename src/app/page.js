@@ -19,7 +19,6 @@ import {
   MessageSquareHeart,
 } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
-// import { Slider } from "@/components/ui/slider";
 import { useState, useEffect } from "react";
 // import {
 //   Dialog,
@@ -30,6 +29,7 @@ import { useState, useEffect } from "react";
 // } from "@/components/ui/dialog";
 import React from "react";
 import { Ripple } from "@/components/magicui/ripple";
+import { Slider } from "@/components/ui/slider";
 
 export default function Home() {
   const emotions = [
@@ -157,7 +157,7 @@ export default function Home() {
             animate={{ opacity: mounted ? 1 : 0, y: mounted ? 0 : 20 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            {/* <div className="space-y-2 text-center">
+            <div className="space-y-2 text-center">
               <p className="text-sm text-muted-foreground/80 font-medium">
                 Whatever you're feeling, we're here to listen
               </p>
@@ -181,10 +181,10 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-            </div> */}
+            </div>
 
             {/* Enhanced slider with dynamic gradient */}
-            {/* <div className="relative px-2">
+            <div className="relative px-2">
               <div
                 className={`absolute inset-0 bg-gradient-to-r ${currentEmotion.color} to-transparent blur-2xl -z-10 transition-all duration-500`}
               />
@@ -196,7 +196,7 @@ export default function Home() {
                 step={1}
                 className="py-4"
               />
-            </div> */}
+            </div>
 
               {/* <div className="text-center">
                 <p className="text-sm text-muted-foreground animate-pulse">
