@@ -13,13 +13,13 @@ import {
     LogIn,
 } from "lucide-react";
 import { SignInButton } from "./auth/SignInButton";
-// import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
 // import { SignInButton } from "@/components/auth/sign-in-button";
 // import { useSession } from "@/lib/contexts/session-context";
 
 export function Header() {
     //   const { isAuthenticated, logout, user } = useSession();
-    //   const [isMenuOpen, setIsMenuOpen] = useState(false);
+      const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     //   console.log("Header: Auth state:", { isAuthenticated, user });
       const navItems = [
@@ -38,7 +38,7 @@ export function Header() {
                     >
                         <AudioWaveform className="h-7 w-7 text-primary animate-pulse-gentle" />
                         <div className="flex flex-col">
-                            <span className="font-semibold text-lg bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent">
+                            <span className="font-semibold text-lg bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-primary">
                                 MindMend AI
                             </span>
                             <span className="text-xs dark:text-muted-foreground">
@@ -89,7 +89,7 @@ export function Header() {
                             )} */}
                             <SignInButton />
 
-                            {/* <Button
+                            <Button
                                 variant="ghost"
                                 size="icon"
                                 className="md:hidden"
@@ -100,13 +100,14 @@ export function Header() {
                                 ) : (
                                     <Menu className="h-5 w-5" />
                                 )}
-                            </Button> */}
+                            </Button>
                         </div>
                     </div>
                 </div>
+                
 
                 {/* Mobile menu */}
-                {/* {isMenuOpen && (
+                {isMenuOpen && (
                     <div className="md:hidden border-t border-primary/10">
                         <nav className="flex flex-col space-y-1 py-4">
                             {navItems.map((item) => (
@@ -119,7 +120,7 @@ export function Header() {
                                     {item.label}
                                 </Link>
                             ))}
-                            {isAuthenticated && (
+                            {/* {isAuthenticated && (
                                 <Button
                                     asChild
                                     className="mt-2 mx-4 gap-2 bg-primary/90 hover:bg-primary"
@@ -129,10 +130,10 @@ export function Header() {
                                         <span>Start Chat</span>
                                     </Link>
                                 </Button>
-                            )}
+                            )} */}
                         </nav>
                     </div>
-                )} */}
+                )}
             </header>
 
             {/* <LoginModal /> */}
